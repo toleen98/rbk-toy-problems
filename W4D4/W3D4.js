@@ -42,11 +42,14 @@ var input = 'check out how interesting this problem is, it\'s insanely interesti
 var output = flipPairs(input);
 console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!*/
 function flipPairs(string){
-	for (var i=0;i<string.length;i+=2) {
-		
-	 string.replace(string[i+1],string[i]);	
+	var str=""
+	var x
+	for (var i = 1; i < string.length; i+=2) {
+		x=string[i-1]
+
+		str+=string[i]+x
 	}
-	return string
+	return str
 }
 
 
