@@ -26,6 +26,13 @@ Calling your function should result in:
 listLengthOfAllWords(['hello', 'world', 'I', 'can', 'code']); //[5, 5, 1, 3, 4];
 
 */
+function listLengthOfAllWords(array){
+	var arr=[]
+	for (var i = 0; i < array.length; i++) {
+		arr.push(array[i].length)
+	}
+	return arr
+}
 
 /*
 Write a function called flipPairs that takes a string a parameter 
