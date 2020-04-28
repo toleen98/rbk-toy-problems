@@ -7,7 +7,15 @@ countNumOfStrings(["foo", 2, 10, "bar", 5, false, {}, "baz"]); //3
 countNumOfStrings(["There is only one string in this example"]); //1
 Hint: Recall typeof? If not: check it out on MDN. :-)
 */
-
+function countNumOfStrings(array){
+	var count=0
+	for (var i = 0; i < array.length; i++) {
+		if(typeof array[i]==="string"){
+			count++
+		}
+	}
+	return count
+}
 
 /*
 2- Write a function called  listLengthOfAllWords that takes an array of words (strings), 
