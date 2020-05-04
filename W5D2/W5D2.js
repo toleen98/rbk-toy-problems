@@ -39,6 +39,7 @@ I.e. If someone called your function with 10 objects
 
 function tallEnoughToRide(array) {
   var names=[]
+  
    array.forEach( function(element) {
     if (element.heightInInches >= 48) {
       names.push(element.name);
@@ -64,7 +65,7 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 function tallestPerson(persons) {
   return persons.reduce(function(start,element) {
-    if (start.heightInInches < element.heightInInches){
+    if (start.heightInInches < element.heightInInches) {
       start = element
     }
     return start
