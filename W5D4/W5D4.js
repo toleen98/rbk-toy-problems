@@ -49,11 +49,23 @@ var shoppingList = [
 ];
 Calling your function should result in:
 
-shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+shoppingSummary(shoppingList); //"I got 3 items at $99.73"*/
 
+function shoppingSummary(shoppingList) {
+  var items=0
+  var spent=0
 
+  shoppingList.forEach(function(item) {
+    if (spent + item.price <= 100) {
+       items++;
+       spent += item.price;
+    }
+  })
+  return `I got ${items} items at $${spent}`
+}
 
 /*
+
 
 
 Exercise 2
