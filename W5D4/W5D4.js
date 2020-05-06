@@ -110,3 +110,14 @@ Would return a new array with the following elements:
 
 //your answer is here
 
+function removeMostExpensive(shoppingList) {
+  var mostExpensive = shoppingList[0].price
+
+  shoppingList.forEach(function(item) {
+    mostExpensive = Math.max(mostExpensive, item.price)
+  })
+  return shoppingList.filter(function(item){
+    return item.price !== mostExpensive
+  })
+}
+
